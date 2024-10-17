@@ -1073,7 +1073,7 @@ class BaseMatcher:
                     # Move to next edge
                     if m.edge_m.l1 != nbr_label2 and m.edge_m.l2 != nbr_label2:
                         edge_m = Segment(nbr_label1, nbr_loc1, nbr_label2, nbr_loc2)
-                        edge_o = Segment(f"O{obs_idx+1}", obs_next)
+                        edge_o = Segment(f"O{obs_idx}", obs_next)
                         m_next = m.next(edge_m, edge_o, obs=obs_idx)
                         if m_next is not None:
                             if m_next.shortkey in lattice_best:
@@ -1117,7 +1117,7 @@ class BaseMatcher:
                     if m.edge_m.l1 != nbr_label:
                         # edge_m = Segment(m.edge_m.l1, m.edge_m.p1, nbr_label, nbr_loc)
                         edge_m = Segment(nbr_label, nbr_loc)
-                        edge_o = Segment(f"O{obs_idx+1}", obs_next)
+                        edge_o = Segment(f"O{obs_idx}", obs_next)
                         m_next = m.next(edge_m, edge_o, obs=obs_idx)
                         if m_next is not None:
                             if m_next.shortkey in lattice_best:
